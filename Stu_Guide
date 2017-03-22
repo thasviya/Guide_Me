@@ -1,0 +1,408 @@
+Guide_Me  Stud_Guide
+
+            Guide_Me is some thing like a helping web app from which many of the students like us can fulfill their dreams 
+without any comlaints.................... Guide_Me’s main intension is to help out the students from their wrong decisions and 
+not to take the courses what they dont like to do in this app they can find all the facilities of their wish.
+ 
+           After the +2(i.e. completion of their intermediate) examinations many of the students will be in a confusion that 
+were to get joined and what course we have to take for those people  this app helps alot in this app the student can find easily 
+what course he/she would like to take and where to go for their furthur studies..... the students can easily take up their 
+courses and enjoy their studies and can do many miracles in the the present compitative world......
+
+         In this app i have been used five tools they are:  
+ * Dreamviewer
+* JavaScript
+* JSP
+* MySQL
+* Apache tomcat
+
+      Dreamveiwer is used to design the web pages in the html...using java script i have been validated the pages..... 
+JavaScript is used write the validation code in html. JSP pages can be used in combination with servlets that handle the 
+business logic, the model supported by Java servlet template engines. MySQL is used for adding the databases.. Apache tomcat is 
+used to deploy your Java Servlets and JSPs. So in your Java project you can build your WAR (short for Web ARchive) file, and 
+just drop it in the deploy directory in tomcat.......
+
+                  Now let me go into the main project. Firstly let me start with the FRONTEND in this we are going to design 
+the web pages, write the code for validation, and make the complete coding part of all the web pages...
+   
+      First we will create the Admin modules... here i have three modules with their html code and validation part in 
+java script........
+
+ADMIN ADD MODULE1
+code for the Admin add module1 is as shown below
+
+<html>
+<head>
+<title>Untitled Document</title>
+<style type="text/css">
+body
+ {
+	background-color: #99FFFF;
+	background-image: url(thasviya.jpg);
+ }
+body,td,th
+ {
+	color: #003333;
+}
+.style1 {color: #9933CC}
+</style></head>
+<body>
+<table width="417" border="0" align="center">
+  <tr>
+    <td colspan="2" bordercolor="#F0F0F0" bgcolor="#99FFFF"><div align="center"><em><strong><u>ADMIN ADD MODULE1 </u>
+                                                                           </strong></em></div></td>
+  </tr>
+  <tr>
+    <td width="255" height="82" class="style1">ENTER NAME OF STUDY </td>
+    <td width="146">
+	<form  name="form1" method="post" action="study.jsp" onsubmit="return validate();">
+      <input type="text" name="textfield" />
+            </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="SAVE" />
+    </div></td>
+  </tr>
+</table>
+</form>
+</body>
+<script type = "text/javascript">
+function validate()
+{
+if (form1.textfield.value=="")
+	{
+	alert("Study Cannot be blank");
+	form1.textfield.focus();
+	return false;
+	}
+else if (!isNaN(form1.textfield.value))
+	{
+	alert("Study Cannot be Numeric");
+	form1.textfield.focus();
+	return false;
+	}
+else
+	{
+	return true;
+	}
+}
+</script>
+</html>
+
+ADMIN ADD MODULE 2
+Code for the admin add module2 is as shown below
+
+<html>
+<head>
+<title>Untitled Document</title>
+<style type="text/css">
+body
+ {
+	background-color: #99FFFF;
+	background-image: url(thasviya.jpg);
+ }
+body,td,th
+ {
+	color: #993300;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+ }
+</style></head>
+<body> <center>
+<table width="489" border="0">
+  <tr>
+    <td height="33" colspan="2"><p align="center"><strong><em><u>ADMIN ADD MODULE2 </u></em></strong></p>    </td>
+  </tr>
+  <td width="172"><tr>
+    <td width="231"><div align="left">Select study </div></td>
+    <td width="290">
+<form id="form1" name="form1" method="post" action="" onsubmit ="return validate();">
+      <div align="left">
+        <input type="text" name="textfield" />
+      </div>
+       </td>
+
+  </tr>
+  <tr>
+    <td><div align="left">Enter State </div></td>
+    <td width="355">
+      <div align="left">
+      <input type="text" name="textfield1" />
+      </div>     </td>
+  </tr>
+  <tr>
+    <td colspan="2"> <form id="form1" name="form1" method="post" action="">
+      <div align="center">
+        <input type="submit" name="Submit" value="Save" />
+        </div>
+    </form>    </td>
+  </tr>
+</table>
+</center>
+</form>
+<div align="center"></div>
+</body>
+<script type ="text/javascript">
+function validate()
+{
+  if(form1.textfield1.value=="")
+  {
+    alert(" state cannot be blank ");
+    form1.textfield1.focus();
+    return false;
+  }
+  else if (!isNaN(form1.textfield1.value))
+ {
+    alert(" State cannot be numeric ");
+    form1.textfield1.focus();
+    return false;
+ }
+ else
+ {
+    return true;
+ }
+}
+</script>
+</html>
+
+ADMIN ADD MODULE3
+code for Admin add module3 is as shown below
+
+<html>
+<head>
+<title>Untitled Document</title>
+<style type="text/css">
+body
+ {
+	background-image: url(thasviya.jpg);
+ } 
+.style1 
+{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+ }
+body,td,th
+ {
+	color: #996600;
+ }
+.style2 {font-family: Geneva, Arial, Helvetica, sans-serif}
+</style></head>
+<body>
+<center>
+<table width="559" height="286" border="0">
+<form id="form1" name="form1" method="post" action="" onsubmit ="return validate();">
+  <tr>
+    <td colspan="2"><div align="center" class="style1">
+      <h3><strong><u>ADMIN_MOD3</u></strong></h3>
+    </div></td>
+  </tr>
+  <tr>
+    <td width="162"><span class="style2">Select study </span></td>
+    <td width="381">
+      <input type="text" name="textfield" />
+        </td>
+  </tr>
+  <tr>
+    <td><span class="style2">Select state </span></td>
+    <td><input type="text" name="textfield2" /></td>
+  </tr>
+  <tr>
+    <td><span class="style2">City/Location</span></td>
+    <td><input type="text" name="textfield3" /></td>
+  </tr>
+  <tr>
+    <td><span class="style2">Enter Address </span></td>
+    <td><input type="text" name="textfield4" /></td>
+  </tr>
+  <tr>
+    <td><span class="style2">Enter Contact </span></td>
+    <td><input type="text" name="textfield5" /></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div align="center">
+        <input type="submit" name="Submit" value="Save" />
+        </div>
+        </td>
+  </tr>
+</form>
+</table>
+<div align="center"></div> </center>
+</body>
+<script type ="text/javascript">
+function validate()
+{
+  if(form1.textfield3.value=="")
+  {
+    alert("City/location can not be blank");
+    form.textfield3.focus();
+    return false;
+  }
+  else if(!isNaN(form1.textfield3.value))
+  {
+    alert("City/Location can not be numeric");
+    form1.textfield3.focus();
+    return false;
+  }
+   else if(form1.textfield4.value=="")
+  {
+    alert("Address can not be blank");
+    form1.textfield4.focus();
+    return false;
+  }
+  else if(!isNaN(form1.textfield4.value))
+  {
+     alert("Address can not be numberic");
+     focus1.textfield4.focus();
+     return false;
+  }
+   else if(form1.textfield5.value=="")
+   {
+     alert("contact can not be blank");
+     form1.textfield5.focus();
+     return false;
+   }
+   else if(isNaN(form1.textfield5.value))
+  {
+    alert("contact can not be in alphabets");
+    form1.textfield5.focus();
+    return false;
+  }
+}
+</script>
+</html>
+
+    As soon as we complete creating the web pages with validation then go with creation of registration form here is the 
+Code for the registration form.... It is as shown below
+
+<html>
+<head>
+<title>Untitled Document</title>
+<style type="text/css">
+body 
+{
+	background-color: #99FFCC;
+	background-image: url(thasviya.jpg);
+}
+body,td,th
+ {
+	color: #003399;
+ }
+.style1 
+{
+	color: #996633;
+	font-style: italic;
+}
+</style></head>
+<body>
+<table width="478" height="317" border="0" align="center">
+<form name= "f1" method="post" action="" onsubmit="return validate();">
+  <tr>
+    <td colspan="2"><div align="center">
+      <h2 class="style1"><u>ADD FORM1</u> </h2>
+    </div></td>
+  </tr>
+  <tr>
+    <td width="203">NAME</td>
+    <td width="259"> 
+      <input type="text" name="textfield" />
+       </td>
+  </tr>
+  <tr>
+    <td>AGE</td>
+  <td><input type="text" name="textfield2" /></td>
+  </tr>
+  <tr>
+    <td>ADDRESS</td>
+    <td><input type="text" name="textfield3" /></td>
+  </tr>
+  <tr>
+    <td>EMAIL</td>
+    <td><input type="text" name="textfield4" /></td>
+  </tr>
+  <tr>
+    <td>PASSWORD</td>
+    <td><input type="text" name="textfield5" /></td>
+  </tr>
+  <tr>
+    <td>PH.NO</td>
+    <td><input type="text" name="textfield6" /></td>
+  </tr>
+  <tr>
+    <td>DATE OF BIRTH </td>
+    <td><input type="text" name="textfield7" /></td>
+  </tr>
+  <tr><center>
+    <td colspan="2">
+      <input type="submit" name="Submit" value="Submit" />
+    
+    </td></center>
+  </tr>
+</table>
+</form>
+</body>
+<script type="text/javascript">
+function validate()
+{
+  var letters = /^[A-Za-z]+$/;
+  var numbers = /^[0-9]+$/;
+  var letterNumber = /^[0-9a-zA-Z-]+$/;
+  var mail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var passw=/^[A-Za-z]\w{7,14}$/;
+  var phoneno = /^\d{10}$/;
+  if(!f1.textfield.value.match(letters))
+  {
+   alert(" Name should be in Alphabets only");
+   return false;
+  }
+  else if(!f1.textfield2.value.match(numbers))
+  {
+   alert("Age should be in numbers");
+   return false;
+  }
+  else if(f1.textfield2.value<=15)
+  {
+  alert("Age should be between 15 and 99 only");
+  return false;
+  }
+  else if(f1.textfield2.value>=99)
+  {
+   alert("Age should be in between 15 and 99 only");
+   return false;
+  }
+  else if(!f1.textfield3.value.match(letterNumber))
+  {
+   alert("Address should be alphanumeric");
+   return false;
+  }
+  else if(!f1.textfield4.value.match(mail))
+  {
+   alert("Invalid email ID");
+   return false;
+  }
+  else if(!f1.textfield5.value.match(passw))
+  {
+   alert("invalid password");
+   return false;
+  }
+  else if(!f1.textfield6.value.match(phoneno))
+  {
+   alert("invalid phone no");
+   return false;
+  }
+  else if(!f1.textfield7.value.match(letterNumber))
+  {
+   alert("Date of birth should be alphanumeric");
+   return false;
+  }
+}
+</script>
+</html>
+
+                Here is the complete FRONTEND of the student guide_me...... 
+                
+                
